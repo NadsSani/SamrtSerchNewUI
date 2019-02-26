@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ViewFlipper
+        android:id="@+id/home_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:flipInterval="10000"
+        android:padding="15dp"
+        android:background="#2e3142"
+        android:inAnimation="@anim/slide_in_right"
+        android:outAnimation="@anim/slide_out_left"
+        android:layout_gravity="center_horizontal" >
+    </ViewFlipper>
+
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+    >
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                 <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="RECENTLY ADDED"
+                                android:padding="5dp"
+                                android:layout_alignParentLeft="true"
+                                />
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/btn_view_all"
+                                    android:layout_gravity="right"
+                                    android:textColor="@color/white"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_alignParentRight="true"
+                                    />
+                </RelativeLayout>
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="none" >
+
+                            <LinearLayout
+                                android:id="@+id/id_gallery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@android:color/transparent"
+                                android:orientation="horizontal" >
+                            </LinearLayout>
+                </HorizontalScrollView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_gold"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:id="@+id/id_grate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grate_caption"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimary"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="2385.00/gm"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_exchange"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:id="@+id/id_exrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exrate_caption"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Click to View"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="right"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_tips"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:id="@+id/id_smtips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tips_caption"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_weight="3"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="BROWSE TIPS"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="right"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>
